@@ -4,12 +4,15 @@ import { theme } from "./src/theme";
 import { Provider as PaperProvider } from "react-native-paper";
 import { paperTheme } from "./src/theme/paperTheme";
 import WelcomeScreen from "./src/screens/WelcomeScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import RegisterScreen from "./src/screens/RegisterScreen";
+import HomeScreen from "./src/screens/HomeScreen";
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <PaperProvider theme={paperTheme}>
-        <WelcomeScreen />
+        <HomeScreen />
       </PaperProvider>
     </ThemeProvider>
   );
