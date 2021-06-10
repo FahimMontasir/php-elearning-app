@@ -1,6 +1,5 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
-import { Avatar } from "react-native-paper";
+import { View } from "react-native";
 import styled from "styled-components/native";
 import Container from "../components/Container";
 import PartnerCard from "../components/PartnerCard";
@@ -9,12 +8,16 @@ import RoundedCard from "../components/RoundedCard";
 import SquareCard from "../components/SquareCard";
 import { HorizontalScroll } from "../utils";
 import { H1 } from "../utils/typography";
+import NoticeBoardScreen from "./NoticeBoardScreen";
 
 const HomeScreen = (props) => {
   return (
     <Container>
       <HomeScrollView>
-        <H1>Trending News</H1>
+        <HeadContainer>
+          <H1>Trending News</H1>
+          <NoticeBoardScreen />
+        </HeadContainer>
         <View>
           <HorizontalScroll>
             <RectangularCard />
@@ -86,3 +89,8 @@ const CourseContainer = styled.View`
 const HomeScrollView = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })``;
+const HeadContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+`;
